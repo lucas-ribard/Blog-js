@@ -1,0 +1,95 @@
+header{
+    background-color: rgb(39, 51, 51);
+    color:aqua;
+    margin: 0px;
+    margin-bottom:10px;
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+}
+
+header h1{
+    margin:0;
+    display: inline;
+}
+h1{
+    text-align: center;
+}
+
+#SectionAdmin{
+    margin:0;
+    display: inline;
+}
+
+body{
+    margin:0;
+    background-color: aliceblue;
+}
+
+#BtConnexion{
+    background-color: rgba(255, 255, 255, 0.767);
+    border-style: none;
+    padding:5px;
+}
+
+#DerniersArticles{
+    margin-top: 3%;
+    /*background-color: red;*/
+}
+
+#VoirArticles{
+    margin-top: 5%;
+    text-align: center;
+    color:blue;
+    font-weight: bolder;
+    
+}
+
+
+
+/*------------ affichage Article ----------------*/
+
+#Main{
+    height: 60vh;
+    padding:  2% 5%;
+    margin-bottom: 20%;
+}
+
+
+article{
+    height: 15vh;
+    overflow-y:hidden;
+    margin-bottom: 2%;
+    
+}
+
+#ArticleBox{
+    background-color: white;
+    padding: 5%;
+    overflow-y:hidden;
+}
+
+#Titre{
+    margin-bottom: 1%;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#Article{
+    height: 100%;
+    overflow-y:hidden;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent);
+    mask-image:none;
+   
+}
+
+/*-------------------------------------------*/
+
+#Naviguation{
+    background-color:  rgb(39, 51, 51);
+    color:blue;
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    padding:10px;
+}
