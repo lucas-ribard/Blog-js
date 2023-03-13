@@ -7,17 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="CSS/index.css" rel="stylesheet" type="text/css" />
     <link href="CSS/Article.css" rel="stylesheet" type="text/css" />
-    <script async src="index.js"></script>
+    <script async src="script/index.js"></script>
     <title>Acceuil</title>
 </head>
 
 <body>
 
-    <header>
-        <h1 onclick=RedirectAcceuil()>Blog-JS</h1>
-        <div id="SectionAdmin">acces admin</div>
-        <button id="BtConnexion" onclick=RedirectConnexion()>Connexion / Inscription</button>
-    </header>
+    <?php require_once("Nav/nav.php")    ?>
 
     <div id="Main">
     <h1>Bienvenue sur Blog-JS</h1>
