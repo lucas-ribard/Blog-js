@@ -14,9 +14,8 @@
     $newUser->Connect($_POST['logName'], $_POST['logPass']);
 }
 
-   // var_dump($_SESSION);
+    var_dump($_SESSION);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,8 +42,9 @@
             <ul>
                 <li><a class="active" href="./index.php">Home</a></li>
                 <li><a href="./register.php">Login</a></li>
-                <li><a href="./Articles.php">Articles</a></li>
+                <li><a href="./toDoList.php">Articles</a></li>
                 <li><a href="./disconnect.php">Disconnect</a></li>
+                <li><a href="./contact.php">Contact</a></li>
             </ul>
         </nav>
     </header>
