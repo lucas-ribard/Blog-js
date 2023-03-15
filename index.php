@@ -13,7 +13,7 @@
 
 <body>
 
-    <?php require_once("Nav/nav.php")    ?>
+<?php require_once("Nav/nav.php")    ?>
 
     <div id="Main">
     <h1>Bienvenue sur Blog-JS</h1>

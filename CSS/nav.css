@@ -1,0 +1,58 @@
+#BtConnexion {
+    background-color: rgba(255, 255, 255, 0.767);
+    border-style: none;
+    padding: 5px;
+    font-weight: bolder;
+    border-radius: 3px;
+}
+
+#BtConnexion:hover {
+    background-color: rgb(112, 134, 192);
+}
+
+header {
+    background-color: rgb(39, 51, 51);
+    color: aqua;
+    margin: 0px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+header h1 {
+    margin: 0;
+    display: inline;
+}
+
+ul {
+    float: right;
+    margin-right: 20px;
+}
+
+ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    background: rgb(112, 134, 192);
+    transition: 0.5s;
+    color: rgb(38, 33, 100);
+}
+
+a {
+    text-decoration: none;
+}

@@ -11,11 +11,7 @@
 </head>
 
 <body>
-    <header>
-        <h1 onclick=RedirectAcceuil()>Blog-JS</h1>
-        <div id="SectionAdmin">acces admin</div>
-        <button id="BtConnexion" onclick=RedirectConnexion()>Connexion / Inscription</button>
-    </header>
+<?php require_once("Nav/nav.php")    ?>
 
     <h1>Nos Articles</h1>
     <div id="Naviguation">
