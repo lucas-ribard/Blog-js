@@ -74,3 +74,4 @@ function PostRegister(){
         return response.text();
     })
 }
+

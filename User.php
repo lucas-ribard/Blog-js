@@ -26,7 +26,7 @@ class User
 
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            echo "You are connected to the database <br>";
+           // echo "You are connected to the database <br>";
         } catch (PDOException $e) {
 
             echo "Error : " . $e->getMessage() . "<br>";
@@ -45,7 +45,7 @@ class User
         $req = $this->conn->prepare($sql);
         $req->execute(array(':login' => $login));
         $row = $req->rowCount();
-        echo 'rowcount' . $row . "<br>";
+        
         if ($row <= 0) {
 
             if(strlen($login) >= 4 && !preg_match("[\W]", $login) && strlen($password) >= 5 && preg_match("/@/", $email) && preg_match("/\./", $email) && strlen($firstname) >= 2 && !preg_match("[\W]", $firstname) && strlen($lastname) >= 2 && !preg_match("[\W]", $lastname)) {
@@ -74,8 +74,7 @@ class User
                 
 
                 
-                echo 'exec'."<br>";
-                echo '<strong>Success!</strong> Your account is now created and you can login <br>';
+                $f =1;
 
                 $userData = [
                     'login' => $login,
@@ -92,24 +91,24 @@ class User
 
                 if (strlen($login) < 4 || preg_match("[\W]", $login)) {
 
-                    $error = "Your login must contain at least 4 caracters and no specials caracters";
+                    $error = "votre login doit contenir au moins 4 caracters sans caractères spécial";
 
                 }
 
                 if (strlen($password) < 5) {
 
-                    $error = "Your password must contain at least 5 caracters";
+                    $error = "votre mot de passe doit contenir au moins 5 caractères ";
 
                 }
 
                 if (!preg_match("/@/", $email) || !preg_match("/\./", $email)) {
 
-                    $error = "Your email is not valid. It must contain '@' and '.'";
+                    $error = "Votre Email n'est pas valide, il doit contenir :'@' et '.'";
 
                 }
 
                 if (strlen($firstname) < 2 || preg_match("[\W]", $firstname) || strlen($lastname) < 2 || preg_match("[\W]", $lastname)) {
-
+                    ?><script> document.getElementById("error").innerText = "Your first and last names must contain at least 2 caracters and no specials caracters";</script><?php
                     $error = "Your first and last names must contain at least 2 caracters and no specials caracters";
 
                 }
@@ -117,9 +116,11 @@ class User
             }
 
         } else {
-            $error = '<strong>Error!</strong> The login already exist. Please choose another one';
+            $error = 'Ce login existe déja';
         }
-        echo '<strong>Success!</strong> Your account is now created and you can login <br>';
+        if($f=1){
+            $error= 'Votre Compte et crée, vous pouvez vous connecter <br>';
+        }
         return $error;
 
     }
@@ -149,13 +150,12 @@ class User
                 $_SESSION['lastname'] = $tab['lastname'];
                 header("location: Articles.php");
 
-            } else {
-                echo '<strong>Error!</strong> Wrong password<br>';
-            }
+            } 
         } else {
-            echo '<strong>Error!</strong> The login do not exist. You don\'t have an account? <a href=\"inscription.php\">Signup</a><br>';
+            $error = 'Login ou mot de passe incorrect';
+            
         }
-
+        return $error;
     }
 
     public function Disconnect()

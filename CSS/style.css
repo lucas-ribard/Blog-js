@@ -34,8 +34,9 @@ body {
     width: 220px;
     margin: 3% auto;
     position: relative;
-    box-shadow: 0 0 20px 9px rgb(114, 145, 180);
+    box-shadow: 0 0 20px 1px rgb(131, 168, 211);
     border-radius: 30px;
+ 
 }
 
 .toggle-btn {
@@ -45,6 +46,8 @@ body {
     border: 0;
     outline: none;
     position: relative;
+    font-size: 15px;
+    font-weight: bolder;
 }
 
 #btn {
@@ -164,4 +167,11 @@ span {
     #check:checked~ul {
         left: 0;
     }
+}
+
+
+#error{
+    color:rgb(255, 0, 0);
+    font-weight: bolder;
+    text-align: center;
 }
