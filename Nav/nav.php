@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,18 +9,27 @@
     <script async src="script/nav.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-<header>
+    <header>
         <h1 onclick=RedirectAcceuil()>Blog-JS</h1>
-        <div id="SectionAdmin">    <!-- faire logique si admin afficher les options d'admins'--></div>
+        <div id="SectionAdmin"> <!-- faire logique si admin afficher les options d'admins'--></div>
         <ul>
-            <!-- faire logique si connecté affiche "disconnect" / si pas connecté afficher 'co / insc'-->
-        <button id="BtConnexion" onclick=RedirectConnexion()>Connexion / Inscription</button>
-        <button id="BtConnexion" onclick=RedirectDéConnexion()>Disconnect</button>
-                <li><a href="./index.php">Home</a></li>
-                <li><a href="./Articles.php">Articles</a></li>
-               
-            </ul>
+            <?php
+            if (!isset($_SESSION['login'])) {
+                echo '<li><button id="BtConnexion" onclick=RedirectConnexion()>Connexion / Inscription</button></li>';
+            } else if(isset($_SESSION['login'])){
+                echo '<li><button id="BtConnexion" onclick=RedirectDéConnexion()>Disconnect</button></li>';
+                echo '<li><button id="BtConnexion" onclick=RedirectUpdate()>'.$_SESSION["login"].'</button></li>';
+            }
+            ?>
+
+
+            <li><a href="./index.php">Home</a></li>
+            <li><a href="./Articles.php">Articles</a></li>
+
+        </ul>
     </header>
 </body>
+
 </html>

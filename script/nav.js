@@ -9,3 +9,7 @@ function RedirectAcceuil() {
 function RedirectDéConnexion() {
     window.location.href = "disconnect.php";
 }
+
+function RedirectUpdate() {
+    window.location.href = "update.php";
+}

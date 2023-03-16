@@ -1,3 +1,15 @@
+<?php
+    require_once('User.php');
+    
+    if(isset($_POST['login'])){
+        if($_POST['newPassword'] === $_POST['newPasswordConf']){
+            $newUser->Update($_POST['login'], $_POST['oldPassword'], $_POST['newPassword'], $_POST['newPasswordConf'], $_POST['email'], $_POST['firstname'], $_POST['lastname']);
+        } 
+    }
+
+    // var_dump($_SESSION);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

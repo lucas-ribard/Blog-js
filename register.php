@@ -48,8 +48,8 @@
             </div>
             <input type="text" class="input-field" placeholder="User Name" name="logName" required>
             <input type="password" class="input-field" placeholder="Password" name="logPass" required>
-            <input type="checkbox" class="check-box"><span>Remember Password</span>
-            <button type="submit" class="submit-btn" id="subLogin" name="submit-log">Login</button>
+            <br><br><br><br>
+            <button type="submit" class="submit-btn" id="subLogin" name="submit-log" onclick="PostLogin()">Login</button>
 
         </form>
 
@@ -62,8 +62,8 @@
             <input type="password" class="input-field" placeholder="Password" name="password" required>
             <input type="password" class="input-field" placeholder="Confirm Password" name="confirmPassword" required>
             <!-- <input type="file" class="input-field" placeholder="Photo" name="photo" required> -->
-            <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
-            <button type="submit" class="submit-btn" id="subRegister" name="submit-reg">Register</button>
+            <br><br><br><br>
+            <button class="submit-btn" id="subRegister" name="submit-reg" onclick="PostRegister()">Register</button>
 
         </form>
     </div>
