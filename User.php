@@ -13,7 +13,6 @@ class User
     public $password;
     public $role;
     private $conn;
-
     public function __construct()
     {
 
@@ -71,11 +70,7 @@ class User
                     )
                 );
 
-                
-
-                
-                $f =1;
-
+                $error = 'Votre Compte et crée, vous pouvez vous connecter <br>';
                 $userData = [
                     'login' => $login,
                     'password' => $hash,
@@ -85,7 +80,8 @@ class User
                 ];
 
                 return $userData;
-
+               
+        
 
             } else {
 
@@ -115,12 +111,11 @@ class User
 
             }
 
-        } else {
+        } else if($row>=1) {
             $error = 'Ce login existe déja';
         }
-        if($f=1){
-            $error= 'Votre Compte et crée, vous pouvez vous connecter <br>';
-        }
+        
+          
         return $error;
 
     }
@@ -148,6 +143,8 @@ class User
                 $_SESSION['email'] = $tab['email'];
                 $_SESSION['firstname'] = $tab['firstname'];
                 $_SESSION['lastname'] = $tab['lastname'];
+                $_SESSION['role'] = $tab['role'];
+
                 header("location: Articles.php");
 
             } 

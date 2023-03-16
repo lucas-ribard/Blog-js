@@ -1,0 +1,45 @@
+body{
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+}
+
+#Main{
+    background-color: white;
+    height: 100%;
+    margin:5%;
+    padding: 2% 5% 2%;
+}
+
+
+#title{
+    width: 100%;
+    height: 5vh;
+    font-size: x-large;
+}
+
+#content{
+    font-size: large;
+    width: 100%;
+    height: 30vh;  
+}
+
+#BottomOption{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+#select{
+    width: 15%;
+    height: 3vh;
+    font-size: large;
+}
+#addBtn{
+    height: 3vh;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #54afff;
+    width: 15%;
+    font-size: large;
+}

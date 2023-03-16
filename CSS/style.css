@@ -21,13 +21,14 @@ body {
 
 .form-box {
     width: 380px;
-    height: 80vh;
+    height: 65vh;
     position: relative;
     margin: 6% auto;
     background: white;
     padding: 2%;
     /* the overflow is to hide the form-box that we don't want to show */
     overflow: hidden;
+    border-radius: 15px;
 }
 
 .button-box {

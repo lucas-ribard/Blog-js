@@ -1,3 +1,9 @@
+#SectionAdmin {
+    margin: 0;
+    display: inline;
+}
+
+
 #BtConnexion {
     background-color: rgba(255, 255, 255, 0.767);
     border-style: none;
@@ -12,7 +18,7 @@
 
 header {
     background-color: rgb(39, 51, 51);
-    color: aqua;
+    color: #54afff;
     margin: 0px;
     margin-bottom: 10px;
     display: flex;

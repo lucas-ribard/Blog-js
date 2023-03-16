@@ -22,14 +22,13 @@
     <title>Update</title>
 </head>
 <body>
-    
-    <header>
+
     <?php require_once("Nav/nav.php")    ?>
 
-    </header>
     <main>
         <h1>You can update your profile here:</h1>
         <form action="update.php" method="POST" id="update">
+            
             <input type="text" name="login" id="login" placeholder="Login" class="inputs">
             <input type="text" name="firstname" id="firstname" placeholder="First Name" class="inputs">
             <input type="text" name="lastname" id="lasstname" placeholder="Last Name" class="inputs">

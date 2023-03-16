@@ -13,8 +13,18 @@
 <body>
     <header>
         <h1 onclick=RedirectAcceuil()>Blog-JS</h1>
-        <div id="SectionAdmin"> <!-- faire logique si admin afficher les options d'admins'--></div>
         <ul>
+        <div id="SectionAdmin"> 
+            <?php 
+            if (($_SESSION['role']=="admin")){
+                echo '<li><button id="BtConnexion" onclick=RedirectAdmin()>Page Admin</button></li>';
+            }
+            if (($_SESSION['role']=="admin" || $_SESSION['role']=="moderator")){
+                echo '<li><button id="BtConnexion" onclick=RedirectPost()>Ajout D\'article</button></li>';
+            }
+            ?>
+        </div>
+        
             <?php
             if (!isset($_SESSION['login'])) {
                 echo '<li><button id="BtConnexion" onclick=RedirectConnexion()>Connexion / Inscription</button></li>';

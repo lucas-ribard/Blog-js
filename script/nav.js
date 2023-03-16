@@ -13,3 +13,7 @@ function RedirectDéConnexion() {
 function RedirectUpdate() {
     window.location.href = "update.php";
 }
+
+function RedirectPost() {
+    window.location.href = "articleCreation.php";
+}
