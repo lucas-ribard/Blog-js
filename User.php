@@ -38,8 +38,6 @@ class User
 
     public function Register($login, $password, $email, $firstname, $lastname) {
 
-        $error = "";
-
         $sql = "SELECT * FROM users WHERE login=:login";
        
         $req = $this->conn->prepare($sql);
@@ -54,13 +52,14 @@ class User
 
                     $hash = password_hash($password, PASSWORD_DEFAULT);
 
-                    $sql = "INSERT INTO `users` (`login`, `password`, `email`, `firstname`, `lastname`) VALUES (:login, :pass, :email, :firstname, :lastname)";
+                    $sql = "INSERT INTO `users` (`login`, `password`, `email`, `firstname`, `lastname`, `role`) VALUES (:login, :pass, :email, :firstname, :lastname, :role)";
                     $req = $this->conn->prepare($sql);
                     $req->execute(array(':login' => $login,
                                         ':pass' => $hash,
                                         ':email' => $email,
                                         ':firstname' => $firstname,
-                                        ':lastname' => $lastname));
+                                        ':lastname' => $lastname,
+                                        ':role' => "subscriber"));
 
                     echo '<strong>Success!</strong> Your account is now created and you can login <br>';
                                         
@@ -70,6 +69,7 @@ class User
                         'email' => $email,
                         'firstname' => $firstname,
                         'lastname' => $lastname,
+                        'role' => "subscriber",
                     ];
 
                     return $userData;
@@ -131,6 +131,7 @@ class User
                 $_SESSION['email'] = $tab['email'];
                 $_SESSION['firstname'] = $tab['firstname'];
                 $_SESSION['lastname'] = $tab['lastname'];
+                $_SESSION['role'] = $tab['role'];
 
                 echo '<strong>Success!</strong> You\'re connected<br>';
 

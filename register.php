@@ -12,7 +12,7 @@
     if(isset($_POST['logName']) && isset($_POST['logPass'])){
 
     $newUser->Connect($_POST['logName'], $_POST['logPass']);
-}
+    }
 
     var_dump($_SESSION);
 ?>
