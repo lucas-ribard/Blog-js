@@ -2,6 +2,9 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    text-align: center;
+}
 
 body {
     margin: 0;
@@ -14,6 +17,12 @@ body {
     padding: 5px;
 }
 
+#Titrepage {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 5vh;
+}
+
 #DerniersArticles {
     margin-top: 3%;
     /*background-color: red;*/
@@ -21,8 +30,10 @@ body {
 
 #VoirArticles {
     margin-top: 5%;
+   
+    padding-bottom:5% ;
     text-align: center;
-    color:#54afff;
+    color: #54afff;
     font-weight: bolder;
 }
 
@@ -39,37 +50,74 @@ article {
     height: 15vh;
     overflow-y: hidden;
     margin-bottom: 2%;
+    background-color: white;
+    padding: 2% 5% 5% 5%
 }
 
-#ArticleBox {
-    background-color: white;
-    padding: 5%;
-    overflow-y: hidden;
-}
 
 #Titre {
-    margin-bottom: 1%;
+    margin-bottom: 0;
     font-size: larger;
     font-weight: bolder;
+
 }
 
 #Article {
-    height: 100%;
+    height: 70%;
     overflow-y: hidden;
-    word-wrap:break-word;
-
+    word-wrap: break-word;
     -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent);
     mask-image: none;
 }
-
-
-/*-------------------------------------------*/
 
 #Naviguation {
     background-color: rgb(39, 51, 51);
     color: #54afff;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    padding: 10px;
+    margin-top: 10%;
+
+}
+
+#ArticleInfo {
+
+    bottom: 0px;
+    color: rgb(105, 145, 165);
+}
+
+#Category {
+    font-weight: bolder;
+    color: #54afff;
+    margin-bottom: 1%;
+    padding-left: 1%;
+}
+
+/*-------------------------------------------*/
+
+
+
+#Naviguation a {
+    background-color: rgb(39, 51, 51);
+    color: #54afff;
+    display: flex;
+    padding-top:0;
+    padding-bottom:0;
+    justify-content: space-between;
+    font-weight: bolder;
+    font-size: xx-large;
+    
+}
+
+li.active a{
+    color: orange !important; 
+}
+
+#NbArticles{
+    font-weight: bolder;
+    padding-top:2.5%;
+    padding-left:2.5%;
+}
+.disabled{
+    pointer-events:none;
+    opacity:0.4;
 }

@@ -17,3 +17,7 @@ function RedirectUpdate() {
 function RedirectPost() {
     window.location.href = "articleCreation.php";
 }
+
+function RedirectAdmin(){
+    window.location.href = "Admin.php";
+}

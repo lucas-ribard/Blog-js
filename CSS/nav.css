@@ -26,6 +26,7 @@ header {
     padding: 10px;
     font-size: 17px;
     font-weight: bolder;
+    
 }
 
 header h1 {
@@ -45,7 +46,7 @@ ul li {
 }
 
 ul li a {
-    color: white;
+    color: aliceblue;
     font-size: 17px;
     padding: 13px;
     border-radius: 3px;

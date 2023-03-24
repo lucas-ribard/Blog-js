@@ -22,3 +22,6 @@ registerBtn.addEventListener("click",()=>{
     button.style.left = "110px";
 })
 
+function RedirectArticle(idArticle) {
+    window.location.href = "AfficherArticle.php?Articleid="+idArticle;
+}

@@ -35,6 +35,33 @@ class Post
 
     }
 
+    public function Comment($userId, $ArticleId, $content){
+
+            $creationDate = date_default_timezone_set("Europe/Paris");
+            $creationDate = date("Y-m-d H:i:s");
+
+            $sql = "INSERT INTO `commentaires` (`id_Article`, `id_User`, `Commentaire`, `date`) VALUES (:ArticleID,:userid,:content,:createdate)";
+            $req = $this->conn->prepare($sql);
+            $req->execute(array(
+                    ':ArticleID' => $ArticleId,
+                    ':userid' => $userId,
+                    ':content' => $content,
+                    ':createdate' => $creationDate));
+
+    }
+    public function GETComment($ArticleId){
+
+        {
+            $sql = "SELECT * FROM `commentaires` Where `id_Article` = ".$ArticleId." ORDER BY `date` DESC";
+            $req = $this->conn->prepare($sql);
+           
+            $req->execute();
+            $result = $req->fetchAll();
+    
+            return $result;
+        }
+}
+
     public function Add($userId, $title, $content, $category, $userRole)
     {
 
@@ -58,22 +85,34 @@ class Post
         } else {
             $error = 'You do not have the right to post';
         }
-
+        return $error;
     }
-    
-    public function GetAllPosts()
+
+    public function GetAllPosts($premier,$parPage)
     {
         $sql = "SELECT * FROM `posts` ORDER BY `createdat` DESC";
-        $req = $this-> conn->prepare($sql);
+        $req = $this->conn->prepare($sql);
+       
         $req->execute();
         $result = $req->fetchAll();
+
         return $result;
     }
 
     public function GetLastThreePost()
     {
         $sql = "SELECT * FROM `posts` ORDER BY `createdat` DESC LIMIT 3 ";
-        $req = $this-> conn->prepare($sql);
+        $req = $this->conn->prepare($sql);
+        $req->execute();
+        $result = $req->fetchAll();
+        return $result;
+    }
+
+
+    public function GetArticle($idArticle)
+    {
+        $sql = "SELECT * FROM `posts` Where `id` = ".$idArticle;
+        $req = $this->conn->prepare($sql);
         $req->execute();
         $result = $req->fetchAll();
         return $result;

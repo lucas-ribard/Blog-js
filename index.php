@@ -7,7 +7,7 @@ if (isset($_POST['login'])) {
     }
 }
 require_once('Post.php');
-$result = $newPost->GetLastThreePost()();
+$result = $newPost->GetLastThreePost();
 
 // var_dump($_SESSION);
 ?>
@@ -20,8 +20,8 @@ $result = $newPost->GetLastThreePost()();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="CSS/index.css" rel="stylesheet" type="text/css" />
-    <link href="CSS/Article.css" rel="stylesheet" type="text/css" />
     <script async src="script/index.js"></script>
+
     <title>Acceuil</title>
 </head>
 
@@ -30,9 +30,36 @@ $result = $newPost->GetLastThreePost()();
     <?php require_once("Nav/nav.php") ?>
 
     <div id="Main">
+
         <h1>Bienvenue sur Blog-JS</h1>
+        <h2>Nos derniers articles :</h2>
         <section id="DerniersArticles">
-            <!-- Conteneur des derniers articles-->
+            <?php foreach ($result as $key => $value): ?>
+                <section id="DerniersArticles">
+
+
+                    <article onclick="RedirectArticle( <?= $value['id'] ?> )">
+
+                        <div id="Titre">
+                            <?php echo $value['title']; ?>
+                        </div>
+                        <div id="Category">
+                            <?php echo "#" . $value['categoryid']; ?>
+                        </div>
+
+
+                        <div id="Article">
+                            <?php echo $value['content']; ?>
+                        </div>
+                        <div id="ArticleInfo">
+                            <?php echo "Ecrit par : <strong>" . $value['userid'] . "</strong> le  " . $value['createdat']; ?>
+                        </div>
+                    </article>
+
+
+
+                </section>
+            <?php endforeach; ?>
         </section>
 
         <div id="VoirArticles" onclick=RedirectConnexion()>

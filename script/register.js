@@ -75,3 +75,16 @@ function PostRegister(){
     })
 }
 
+function PostCommentaires(){
+    
+    const formData = new FormData(registerForm1)
+    //console.log(Array.from(formData))
+    fetch('register.php', {
+        method: "GET",
+        body: formData
+    })
+    .then(response=>{
+        //console.log(response)
+        return response.text();
+    })
+}

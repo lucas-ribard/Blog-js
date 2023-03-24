@@ -369,6 +369,21 @@ class User
 
     }
 
+    public function GetAllUserInfo()
+    {
+        if ($_SESSION['role']="admin"){
+            $sql = "SELECT * FROM users ";
+
+            $req = $this->conn->prepare($sql);
+            $req->execute(array());
+            $result = $req->fetchAll();
+    
+            return $result;
+            
+        }
+      
+    }
+
 }
 
 $newUser = new User();

@@ -43,3 +43,56 @@ body{
     width: 15%;
     font-size: large;
 }
+
+#CommentBT{
+    height: 3vh;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #54afff;
+    width: 15%;
+    font-size: large;
+}
+
+#catégories{
+    color: #54afff;
+    font-weight: bolder;
+}
+
+
+#MainArticle{
+    background-color: white;
+    height: 100%;
+    margin:5%;
+    padding: 2% 5% 2%;
+}
+
+#ArticleInfo{
+    margin-bottom: 5%;
+}
+
+#comment{
+    background-color: white;
+    height: 100%;
+    margin:5%;
+    margin-top: 0;
+    padding: 2% 5% 2%;
+}
+#commentaire{
+    overflow-y: hidden;
+    word-wrap: break-word;
+    width: 100%;
+}
+.Com{
+    margin-top:1%;
+    padding:1% 2% 1% 2%;
+    background-color:aliceblue;
+    box-shadow: 0px 5px 5px rgb(217, 227, 236);
+}
+.ComInfo{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+    color:rgb(96, 97, 129);
+    padding-left: 3%;
+    padding-right: 10%;
+}

@@ -36,7 +36,7 @@
 
 
             <li><a href="./index.php">Home</a></li>
-            <li><a href="./Articles.php">Articles</a></li>
+            <li><a href="./Articles.php?page=1">Articles</a></li>
 
         </ul>
     </header>

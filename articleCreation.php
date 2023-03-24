@@ -28,7 +28,6 @@ $req->execute();
 
 $result = $req->fetchAll();
 
-
 /*
 var_dump($_SESSION);
 echo "<br><br>";
