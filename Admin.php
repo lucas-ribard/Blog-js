@@ -43,7 +43,7 @@ function AfficherUser($value)
 </head>
 
 <body>
-    
+
     <?php
     require_once("Nav/nav.php");
 
@@ -52,7 +52,6 @@ function AfficherUser($value)
     endforeach;
 
     ?>
-
 
 </body>
 
