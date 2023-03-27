@@ -21,9 +21,9 @@ function AfficherUser($value)
     echo '<input type="text" name="lastname" id="lastname" value='.$value['password'].' hidden></input>';       
     
     echo '<select name="select" id="select"><br><option>'.$value['role'].'</option>';
-    if($value['role'] != 'subscriber'){echo '<option value="subscriber">subscriber</option>';};
-    if($value['role'] != 'moderator'){echo '<option value="moderator">moderator</option>';};
-    if($value['role'] != 'admin'){echo '<option value="admin">admin</option>';};
+    if ($value['role'] != 'subscriber'){echo '<option value="subscriber">subscriber</option>';};
+    if ($value['role'] != 'moderator'){echo '<option value="moderator">moderator</option>';};
+    if ($value['role'] != 'admin'){echo '<option value="admin">admin</option>';};
     echo "</select>";
 
     echo '<button type="submit">Enregistrer</button><button>Supprimer</button>';
